@@ -5,7 +5,7 @@ const timelineEntries = [
     year: '2019', 
     season: '春',
     title: '2019年 春',
-    description: '東京でIT企業に新卒入社'
+    description: '岩手大学卒業後に東京でIT企業に新卒入社'
   },
   { 
     year: '2020', 
@@ -14,10 +14,28 @@ const timelineEntries = [
     description: '北海道の生協に転職しDX推進本部の立ち上げ期に参画。フロントからバックエンド、モダンからレガシー技術までを経験。自身でAuth0を活用した部門を横断的にまたがる認証基盤構築PJを主導。'
   },
   { 
+    year: '2021', 
+    season: '秋',
+    title: '2021年 秋',
+    description: '個人でプログラミング教育を提供しているプラットフォームMentaで上位2.5%のメンターに送られるシルバーメダル獲得。'
+  },
+  { 
+    year: '2021', 
+    season: '冬',
+    title: '2021年 冬',
+    description: 'YoutuberのマッチングプラットフォームのTalemaを開発するGANGAN株式会社に副業業務委託として約1年間参画。'
+  },
+  { 
+    year: '2022', 
+    season: '夏',
+    title: '2022年 夏',
+    description: '株式会社weareのSaaS開発に副業業務委託として約1年間参画'
+  },
+  { 
     year: '2023', 
     season: '秋',
     title: '2023年 秋',
-    description: '退職後にカナダのモントリオール市へ移住し英語学習をしながらフリーランスへ転身'
+    description: '北海道の生協を退職後にカナダのモントリオール市へ移住し英語学習をしながらフリーランスへ転身'
   },
   { 
     year: '2024', 
