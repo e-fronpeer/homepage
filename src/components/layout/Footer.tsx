@@ -26,7 +26,7 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">お問い合わせ</h4>
             <ul className="space-y-2">
-              <li>app0hgt@gmail.com</li>
+              <li>higu@e-fronpeer.com</li>
               {/* <li>+81 080-XXX-XXXX</li> */}
             </ul>
           </div>
