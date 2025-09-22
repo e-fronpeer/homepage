@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'wouter';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
@@ -24,10 +24,11 @@ export function Header() {
             <NavigationMenu>
               <NavigationMenuList>
                 {[
-                  { href: '#home', label: 'ホーム' },
-                  { href: '#services', label: 'サービス' },
-                  { href: '#about', label: '会社概要' },
-                  { href: '#contact', label: 'お問い合わせ' }
+                  { href: '/', label: 'ホーム' },
+                  { href: '/#services', label: 'サービス' },
+                  { href: '/#about', label: '会社概要' },
+                  { href: '/blog', label: 'ブログ' },
+                  { href: '/#contact', label: 'お問い合わせ' }
                 ].map(({ href, label }) => (
                   <NavigationMenuItem key={href}>
                     <Button
