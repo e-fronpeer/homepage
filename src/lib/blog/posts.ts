@@ -23,6 +23,7 @@ export type Post = PostMeta & {
 };
 
 const postsDirectory = path.join(process.cwd(), "content");
+const FALLBACK_POST_DATE = "1970-01-01";
 
 export function getPostSlugs(): string[] {
     return fs.readdirSync(postsDirectory).filter((file) => file.endsWith(".md"));
@@ -91,8 +92,8 @@ export function getAllPosts(): PostMeta[] {
             })
             .sort((a, b) => {
                 // 日付の降順でソート（新しいものを先頭に）
-                const dateA = new Date(a.date || '1970-01-01');
-                const dateB = new Date(b.date || '1970-01-01');
+                const dateA = new Date(a.date || FALLBACK_POST_DATE);
+                const dateB = new Date(b.date || FALLBACK_POST_DATE);
                 return dateB.getTime() - dateA.getTime();
             });
     } catch (error) {
