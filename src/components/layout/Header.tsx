@@ -7,9 +7,14 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu';
 import { Menu, X } from 'lucide-react';
+import { useRouter } from 'next/router';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { basePath } = useRouter();
+
+  const resolveHref = (href: string) =>
+    href.startsWith('/') ? `${basePath}${href}` : href;
 
   return (
     <header className="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
@@ -36,7 +41,7 @@ export function Header() {
                       className="px-3 py-2 hover:text-primary transition-colors"
                       asChild
                     >
-                      <a href={href}>{label}</a>
+                      <a href={resolveHref(href)}>{label}</a>
                     </Button>
                   </NavigationMenuItem>
                 ))}

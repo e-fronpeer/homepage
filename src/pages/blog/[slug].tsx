@@ -2,6 +2,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { useRouter } from "next/router";
 import { getPostSlugs, getPostBySlug, Post } from "@/lib/blog/posts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -9,6 +10,8 @@ import { Footer } from "@/components/layout/Footer";
 type Props = { post: Post };
 
 export default function PostPage({ post }: Props) {
+    const { basePath } = useRouter();
+
     return (
         <div className="min-h-screen flex flex-col">
             <Head>
@@ -41,7 +44,11 @@ export default function PostPage({ post }: Props) {
                                 <div className="flex items-center gap-2">
                                     {post.avatar && (
                                         <img
-                                            src={post.avatar}
+                                            src={
+                                                post.avatar.startsWith("/")
+                                                    ? `${basePath}${post.avatar}`
+                                                    : post.avatar
+                                            }
                                             alt={post.author}
                                             className="w-8 h-8 rounded-full"
                                         />

@@ -1,12 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 export function Hero() {
+  const { basePath } = useRouter();
+  const backgroundUrl = `${basePath}/images/sapporo-oodori.jpg`;
+
   return (
     <section 
       className="min-h-[90vh] relative flex items-center justify-center"
       style={{
-        backgroundImage: 'url("/images/sapporo-oodori.jpg")',
+        backgroundImage: `url("${backgroundUrl}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

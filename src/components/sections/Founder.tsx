@@ -1,7 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useRouter } from "next/router";
 
 export function Founder() {
+  const { basePath } = useRouter();
+  const avatarSrc = `${basePath}/images/shuya_higuchi_bali.jpg`;
+
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -13,7 +17,7 @@ export function Founder() {
           <CardContent className="p-8">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <Avatar className="w-32 h-32">
-                <AvatarImage src="/images/shuya_higuchi_bali.jpg" alt="樋口 修也" />
+                <AvatarImage src={avatarSrc} alt="樋口 修也" />
                 <AvatarFallback className="text-2xl">SH</AvatarFallback>
               </Avatar>
 
