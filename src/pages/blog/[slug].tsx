@@ -23,15 +23,15 @@ export default function PostPage({ post }: Props) {
                 <nav className="mb-8">
                     <Link
                         href="/blog"
-                        className="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-2"
+                        className="text-primary hover:text-primary/80 transition-colors flex items-center gap-2"
                     >
                         ← ブログ一覧に戻る
                     </Link>
                 </nav>
-                <article className="bg-white rounded-lg shadow-md p-8">
+                <article className="bg-card rounded-lg shadow-md p-8">
                     <header className="mb-8">
-                        <h1 className="text-4xl font-bold mb-4 text-gray-900">{post.title}</h1>
-                        <div className="flex items-center gap-4 text-sm text-gray-600 border-b border-gray-200 pb-4">
+                        <h1 className="text-4xl font-bold mb-4 text-foreground">{post.title}</h1>
+                        <div className="flex items-center gap-4 text-sm text-muted-foreground border-b border-border pb-4">
                             <time dateTime={post.date}>
                                 更新日：
                                 {new Date(post.date).toLocaleDateString('ja-JP', {

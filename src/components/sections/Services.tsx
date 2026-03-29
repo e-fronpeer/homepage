@@ -21,7 +21,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           サービス内容
@@ -39,7 +39,7 @@ export function Services() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
+                <p className="text-muted-foreground">
                   {description}
                 </p>
               </CardContent>

@@ -1,5 +1,6 @@
 import { SWRConfig } from "swr";
 import "../index.css";
+import "../styles/globals.css";
 import "../styles/markdown.css";
 import { fetcher } from "@/lib/fetcher";
 import type { AppProps } from "next/app";
