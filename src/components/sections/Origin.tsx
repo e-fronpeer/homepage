@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export function Origin() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -16,7 +16,7 @@ export function Origin() {
 
           <Card className="max-w-3xl mx-auto">
             <CardContent className="p-8">
-              <p className="text-gray-600 leading-relaxed text-lg">
+              <p className="text-muted-foreground leading-relaxed text-lg">
                 Eフロンピアという社名には3つの想いが込められています。「いいフロンティア」と「仲間（peer）」の融合、そして北海道の古称「蝦夷（Ezo）」の「E」。また、11月26日の創業日は「いい風呂の日」にちなんでおり、心地よい価値を生み出したいという願いが込められています。
               </p>
             </CardContent>

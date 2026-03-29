@@ -7,7 +7,7 @@ export function Founder() {
   const avatarSrc = `${basePath}/images/shuya_higuchi_bali.jpg`;
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           創業者
@@ -26,7 +26,7 @@ export function Founder() {
                 <p className="text-primary font-medium mb-4">
                   Eフロンピア合同会社代表
                 </p>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   フルスタック開発とビジネス経験を活かし、北海道から新しい価値を創造することを目指しています。技術とビジネスの架け橋として、お客様の成長をサポートいたします。
                 </p>
               </div>

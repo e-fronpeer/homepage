@@ -1,7 +1,7 @@
 /* Markdownスタイル */
 .markdown-body {
     line-height: 1.6 !important;
-    color: var(--foreground) !important;
+    color: hsl(var(--foreground)) !important;
     font-size: 16px !important;
 }
 
@@ -14,18 +14,18 @@
     margin-top: 1.5em !important;
     margin-bottom: 0.5em !important;
     font-weight: bold !important;
-    color: var(--foreground) !important;
+    color: hsl(var(--foreground)) !important;
 }
 
 .markdown-body h1 {
     font-size: 2rem !important;
-    border-bottom: 2px solid var(--border) !important;
+    border-bottom: 2px solid hsl(var(--border)) !important;
     padding-bottom: 0.3em !important;
 }
 
 .markdown-body h2 {
     font-size: 1.6rem !important;
-    border-bottom: 1px solid var(--border) !important;
+    border-bottom: 1px solid hsl(var(--border)) !important;
     padding-bottom: 0.3em !important;
 }
 
@@ -107,7 +107,7 @@
     border-left: 4px solid var(--blockquote-border) !important;
     margin: 1em 0 !important;
     padding-left: 1em !important;
-    color: var(--secondary) !important;
+    color: hsl(var(--secondary)) !important;
     font-style: italic !important;
 }
 
@@ -115,12 +115,12 @@
     border-collapse: collapse !important;
     width: 100% !important;
     margin: 1em 0 !important;
-    border: 2px solid #000000 !important;
+    border: 2px solid var(--table-border) !important;
 }
 
 .markdown-body th,
 .markdown-body td {
-    border: 1px solid #000000 !important;
+    border: 1px solid var(--table-border) !important;
     padding: 0.75em !important;
     text-align: left !important;
 }
@@ -140,13 +140,13 @@
 
 /* リンクのスタイル */
 .markdown-body a {
-    color: #0066cc !important;
+    color: var(--link-color) !important;
     text-decoration: underline !important;
     font-weight: 500 !important;
 }
 
 .markdown-body a:hover {
-    color: #004499 !important;
+    color: var(--link-hover-color) !important;
     text-decoration: none !important;
 }
 

@@ -22,17 +22,17 @@ export default function BlogIndex({ posts }: Props) {
                 <h1 className="text-4xl font-bold text-center mb-12">ブログ記事一覧</h1>
                 <div className="grid gap-8">
                     {posts.map((post) => (
-                        <article key={post.slug} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                        <article key={post.slug} className="bg-card rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                             <div className="post-header">
                                 <h2 className="text-2xl font-bold mb-3">
                                     <Link
                                         href={`/blog/${post.slug}`}
-                                        className="text-gray-900 hover:text-blue-600 transition-colors"
+                                        className="text-foreground hover:text-primary transition-colors"
                                     >
                                         {post.title}
                                     </Link>
                                 </h2>
-                                <div className="flex items-center gap-4 text-sm text-gray-600">
+                                <div className="flex items-center gap-4 text-sm text-muted-foreground">
                                     <time dateTime={post.date}>
                                         更新日：
                                         {new Date(post.date).toLocaleDateString('ja-JP')}

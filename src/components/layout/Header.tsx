@@ -17,7 +17,7 @@ export function Header() {
     href.startsWith('/') ? `${basePath}${href}` : href;
 
   return (
-    <header className="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
+    <header className="fixed w-full bg-background/90 backdrop-blur-sm z-50 border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Button variant="ghost" className="font-bold text-xl p-0" asChild>
@@ -63,7 +63,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute w-full bg-white border-b">
+        <div className="md:hidden absolute w-full bg-background border-b">
           <nav className="container mx-auto px-4 py-4">
             <ul className="space-y-4">
               {[
