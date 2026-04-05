@@ -37,6 +37,7 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          CUSTOM_DOMAIN: "true"
         
       - name: List build output (debug)
         run: ls -la ./out
