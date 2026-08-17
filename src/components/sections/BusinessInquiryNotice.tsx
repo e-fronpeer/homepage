@@ -9,10 +9,12 @@ export function BusinessInquiryNotice() {
           id="business-inquiry-status"
           className="text-xl font-bold md:text-2xl"
         >
-          新規事業に関するお問い合わせについて
+          お問い合わせ受付について
         </h2>
         <p className="mt-3 text-muted-foreground">
-          現在、新規事業に関するお問い合わせの受付を停止しております。
+          現在、採用および新規のご依頼に関するお問い合わせの受付を停止しております。
+          <br />
+          現時点で、受付再開の予定はございません。
         </p>
       </div>
     </section>
