@@ -1,16 +1,8 @@
-import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from '@/components/ui/navigation-menu';
-import { Menu, X } from 'lucide-react';
 import { useRouter } from 'next/router';
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { basePath } = useRouter();
 
   const resolveHref = (href: string) =>
@@ -24,69 +16,23 @@ export function Header() {
             <Link href="/">E-Fronpeer</Link>
           </Button>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <NavigationMenu>
-              <NavigationMenuList>
-                {[
-                  { href: '/', label: 'ホーム' },
-                  { href: '/#services', label: 'サービス' },
-                  { href: '/#about', label: '会社概要' },
-                  { href: '/blog', label: 'ブログ' },
-                  { href: '/#contact', label: 'お問い合わせ' }
-                ].map(({ href, label }) => (
-                  <NavigationMenuItem key={href}>
-                    <Button
-                      variant="ghost"
-                      className="px-3 py-2 hover:text-primary transition-colors"
-                      asChild
-                    >
-                      <a href={resolveHref(href)}>{label}</a>
-                    </Button>
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X /> : <Menu />}
-          </Button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute w-full bg-background border-b">
-          <nav className="container mx-auto px-4 py-4">
-            <ul className="space-y-4">
-              {[
-                { href: '#home', label: 'ホーム' },
-                { href: '#services', label: 'サービス' },
-                { href: '#about', label: '会社概要' },
-                { href: '#contact', label: 'お問い合わせ' }
-              ].map(({ href, label }) => (
-                <li key={href}>
-                  <Button
-                    variant="ghost"
-                    className="w-full justify-start"
-                    asChild
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <a href={href}>{label}</a>
-                  </Button>
-                </li>
-              ))}
-            </ul>
+          <nav className="flex items-center gap-1 sm:gap-2">
+            {[
+              { href: '/#services', label: 'サービス' },
+              { href: '/blog', label: 'ブログ' }
+            ].map(({ href, label }) => (
+              <Button
+                key={href}
+                variant="ghost"
+                className="px-2 sm:px-3 py-2 hover:text-primary transition-colors"
+                asChild
+              >
+                <a href={resolveHref(href)}>{label}</a>
+              </Button>
+            ))}
           </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 }

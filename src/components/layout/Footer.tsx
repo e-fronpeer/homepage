@@ -2,7 +2,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">
               Eフロンピア合同会社
@@ -20,14 +20,6 @@ export function Footer() {
               <li>自社専用マーケティングツール構築</li>
               <li>ソフトウェア開発</li>
               <li>プログラミング教育</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">お問い合わせ</h4>
-            <ul className="space-y-2">
-              <li>higu@e-fronpeer.com</li>
-              {/* <li>+81 080-XXX-XXXX</li> */}
             </ul>
           </div>
         </div>
