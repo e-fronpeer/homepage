@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
@@ -27,18 +26,9 @@ export function Hero() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
             共に拓く、いいフロンティア
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto">
             北海道から世界へ、Eフロンピア合同会社
           </p>
-          <div>
-            <Button
-              size="lg"
-              className="bg-primary/90 hover:bg-primary"
-              asChild
-            >
-              <a href="#services">サービス</a>
-            </Button>
-          </div>
         </motion.div>
       </div>
     </section>

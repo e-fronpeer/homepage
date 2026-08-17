@@ -2,7 +2,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
           <div>
             <h3 className="text-xl font-bold mb-4">
               Eフロンピア合同会社
@@ -12,15 +12,6 @@ export function Footer() {
               <p>北海道札幌市北区北7条西4丁目1番地1</p>
               <p>トーカン札幌第一キャステール607</p>
             </address>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">サービス</h4>
-            <ul className="space-y-2">
-              <li>自社専用マーケティングツール構築</li>
-              <li>ソフトウェア開発</li>
-              <li>プログラミング教育</li>
-            </ul>
           </div>
         </div>
         

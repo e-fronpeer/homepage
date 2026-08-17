@@ -16,20 +16,14 @@ export function Header() {
             <Link href="/">E-Fronpeer</Link>
           </Button>
 
-          <nav className="flex items-center gap-1 sm:gap-2">
-            {[
-              { href: '/#services', label: 'サービス' },
-              { href: '/blog', label: 'ブログ' }
-            ].map(({ href, label }) => (
-              <Button
-                key={href}
-                variant="ghost"
-                className="px-2 sm:px-3 py-2 hover:text-primary transition-colors"
-                asChild
-              >
-                <a href={resolveHref(href)}>{label}</a>
-              </Button>
-            ))}
+          <nav>
+            <Button
+              variant="ghost"
+              className="px-3 py-2 hover:text-primary transition-colors"
+              asChild
+            >
+              <a href={resolveHref('/blog')}>ブログ</a>
+            </Button>
           </nav>
         </div>
       </div>
